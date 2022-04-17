@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android_project/InfomationCollector/app/src/main/res/layout/activity_get_contactors.xml" value="0.27912867274569403" />
+        <entry key="..\:/Android_project/InfomationCollector/app/src/main/res/layout/activity_get_phone_info.xml" value="0.27912867274569403" />
+        <entry key="..\:/Android_project/InfomationCollector/app/src/main/res/layout/activity_list.xml" value="0.46693840579710144" />
+        <entry key="..\:/Android_project/InfomationCollector/app/src/main/res/layout/activity_main.xml" value="0.27203647416413373" />
+        <entry key="..\:/Android_project/InfomationCollector/app/src/main/res/layout/contact.xml" value="0.46693840579710144" />
+        <entry key="..\:/Android_project/InfomationCollector/app/src/main/res/layout/contactor_list_view.xml" value="0.27912867274569403" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
