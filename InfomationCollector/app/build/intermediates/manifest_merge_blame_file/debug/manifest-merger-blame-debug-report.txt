@@ -1,0 +1,113 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.infomationcollector"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.READ_CONTACTS" />
+11-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:6:5-72
+11-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:6:22-69
+12    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+12-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:7:5-73
+12-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:7:22-70
+13    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+13-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:8:5-71
+13-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:8:22-68
+14    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+14-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:9:5-75
+14-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:9:22-72
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:10:5-67
+15-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:10:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:11:5-79
+16-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:11:22-76
+17    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+17-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:12:5-76
+17-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:12:22-73
+18    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+18-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:13:5-76
+18-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:13:22-73
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:14:5-79
+19-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:14:22-76
+20    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+20-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:15:5-81
+20-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:15:22-78
+21
+22    <permission-group android:name="android.location.Location" />
+22-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:17:5-66
+22-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:17:23-63
+23
+24    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+24-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:13:5-76
+24-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:13:22-73
+25    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+25-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:12:5-76
+25-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:12:22-73
+26    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+26-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:21:5-23:47
+26-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:22:9-64
+27    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+27-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:14:5-79
+27-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:14:22-76
+28    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+28-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:15:5-81
+28-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:15:22-78
+29
+30    <application
+30-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:27:5-49:19
+31        android:allowBackup="true"
+31-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:28:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.5.0] E:\gradle-7.4.2-all\caches\transforms-3\b1fe9740f6c86f0b7649a763c3bf2b85\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:icon="@mipmap/ic_launcher"
+34-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:29:9-43
+35        android:label="@string/app_name"
+35-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:30:9-41
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:31:9-54
+37        android:supportsRtl="true"
+37-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:32:9-35
+38        android:testOnly="true"
+39        android:theme="@style/Theme.InfomationCollector" >
+39-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:33:9-57
+40        <activity
+40-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:34:9-36:40
+41            android:name="com.example.infomationcollector.GetPhoneInfo"
+41-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:35:13-41
+42            android:exported="false" />
+42-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:36:13-37
+43        <activity
+43-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:37:9-39:40
+44            android:name="com.example.infomationcollector.GetContactors"
+44-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:38:13-42
+45            android:exported="false" />
+45-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:39:13-37
+46        <activity
+46-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:40:9-48:20
+47            android:name="com.example.infomationcollector.MainActivity"
+47-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:41:13-41
+48            android:exported="true" >
+48-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:42:13-36
+49            <intent-filter>
+49-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:43:13-47:29
+50                <action android:name="android.intent.action.MAIN" />
+50-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:44:17-69
+50-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:44:25-66
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+52-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:46:17-77
+52-->C:\Users\Kla_master\Desktop\project\InfomationCollector\app\src\main\AndroidManifest.xml:46:27-74
+53            </intent-filter>
+54        </activity>
+55    </application>
+56
+57</manifest>
