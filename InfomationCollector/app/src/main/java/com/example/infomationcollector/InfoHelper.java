@@ -1,9 +1,11 @@
 package com.example.infomationcollector;
 
 import android.annotation.SuppressLint;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.wifi.ScanResult;
@@ -11,6 +13,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.provider.ContactsContract;
 import android.provider.Settings;
 import android.telephony.CellLocation;
 import android.telephony.TelephonyManager;
@@ -18,6 +21,8 @@ import android.telephony.cdma.CdmaCellLocation;
 import android.telephony.gsm.GsmCellLocation;
 import android.text.TextUtils;
 import android.Manifest;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
@@ -158,16 +163,50 @@ public class InfoHelper {
         return tm != null && tm.getPhoneType() != TelephonyManager.PHONE_TYPE_NONE;
     }
 
-    public Location getGPSLocation() {
+    public Location get_Gps_Location_2(Context context) {
         Location location = null;
+        String locationProvider="";
+        LocationManager locationManager = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
+        List<String> providers = locationManager.getProviders(true);
+        if (providers.contains(LocationManager.GPS_PROVIDER)) {
+            //如果是GPS
+            locationProvider = LocationManager.GPS_PROVIDER;
+            //   Log.d(TAG, "onCreate: gps=" + locationProvider);
+        } else if (providers.contains(LocationManager.NETWORK_PROVIDER)) {
+            //如果是Network
+            locationProvider = LocationManager.NETWORK_PROVIDER;
+            //   Log.d(TAG, "onCreate: network=" + locationProvider);
+        } else {
+            //   Log.d(TAG, "onCreate: 没有可用的位置提供器");
+            Toast.makeText(context, "没有可用的位置提供器", Toast.LENGTH_SHORT).show();
+        }
+        //获取Location，老是获取为空！所以用locationManager.getBestProvider(criteria, true);
+
+        location = locationManager.getLastKnownLocation(locationProvider);
+        return  location;
+    }
+
+
+    public Location getGPSLocation(Context context) {
+        Location location = null;
+
         LocationManager manager = this.getLocationManager(this.context);
         //权限检查
+       String res="not enter if box";
         if (ActivityCompat.checkSelfPermission(this.context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(context, "enter 1", Toast.LENGTH_SHORT).show();
             return null;
         }
+
         if (manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {//是否支持GPS定位
+           // Toast.makeText(context, "enter 2", Toast.LENGTH_SHORT).show();
+            res="enter 2";
             location = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         }
+
+        if (null==location)
+            System.out.println("location is null");
+        Toast.makeText(context, res, Toast.LENGTH_SHORT).show();
         return location;
     }
 
@@ -300,5 +339,12 @@ public class InfoHelper {
     public String getCPUName() {
         return Build.HARDWARE;
     }
+
+    // 以下是手机APP信息获取
+
+
+
+
+
 
 }

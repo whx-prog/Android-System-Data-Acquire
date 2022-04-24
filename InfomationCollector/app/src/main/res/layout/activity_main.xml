@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
@@ -22,5 +24,42 @@
         android:text="获取手机通讯录">
 
     </Button>
+
+    <Button
+        android:id="@+id/通话按钮"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取通话记录" />
+
+    <Button
+        android:id="@+id/短信按钮"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取短信" />
+
+    <Button
+        android:id="@+id/拍照"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拍照并且存储" />
+
+    <ImageView
+        android:id="@+id/图片显示"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:visibility="gone"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <Button
+        android:id="@+id/获取应用"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取应用信息" />
+
+    <Button
+        android:id="@+id/社交软件"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="社交软件分析" />
 
 </LinearLayout>

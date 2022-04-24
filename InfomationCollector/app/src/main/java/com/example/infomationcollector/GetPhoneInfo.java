@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GetPhoneInfo extends AppCompatActivity implements MyReceiver.MyListener{
     // resources
@@ -64,7 +66,7 @@ public class GetPhoneInfo extends AppCompatActivity implements MyReceiver.MyList
         InfoHelper infoHelper = new InfoHelper(GetPhoneInfo.this);
         // clear
         tv1.setText("");
-
+        //System.out.println("AAAAAAAAAA");
         // synchronous
         appendInfo("手机品牌: " + infoHelper.getPhoneBrand());
         appendInfo("处理器: " + infoHelper.getCPUName());
@@ -79,8 +81,19 @@ public class GetPhoneInfo extends AppCompatActivity implements MyReceiver.MyList
         appendInfo("MNC: " + infoHelper.getMNC());
         appendInfo("MCC: " + infoHelper.getMCC());
         appendInfo("是否是手机: " + infoHelper.isPhone());
-        appendInfo("GPS位置(Latitude): " + infoHelper.getGPSLocation().getLatitude());
-        appendInfo("GPS位置(Longitude): " + infoHelper.getGPSLocation().getLongitude());
+        if(null!=infoHelper.getGPSLocation(GetPhoneInfo.this))
+        {
+            appendInfo("GPS位置(Latitude): " + infoHelper.getGPSLocation(GetPhoneInfo.this).getLatitude());
+            appendInfo("GPS位置(Longitude): " + infoHelper.getGPSLocation(GetPhoneInfo.this).getLongitude());
+        }else if(null!=infoHelper.get_Gps_Location_2(GetPhoneInfo.this))
+        {
+            appendInfo("GPS位置(Latitude): " + infoHelper.get_Gps_Location_2(GetPhoneInfo.this).getLatitude());
+            appendInfo("GPS位置(Longitude): " + infoHelper.get_Gps_Location_2(GetPhoneInfo.this).getLongitude());
+          //  infoHelper.get_Gps_Location_2(GetPhoneInfo.this);
+        }//else
+            //Toast.makeText(GetPhoneInfo.this, "location 为空", Toast.LENGTH_SHORT).show();
+     //   appendInfo("GPS位置(Latitude): " + infoHelper.getGPSLocation().getLatitude());
+     //   appendInfo("GPS位置(Longitude): " + infoHelper.getGPSLocation().getLongitude());
         appendInfo("移动网络运营商: " + infoHelper.getSimOperatorByMnc());
         appendInfo("SIM卡运营商: " + infoHelper.getSimOperatorName());
         appendInfo("SIM卡是否准备好: " + infoHelper.isSimCardReady());
