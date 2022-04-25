@@ -27,6 +27,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
+import com.example.infomationcollector.wifilocation.AP;
+import com.example.infomationcollector.wifilocation.Point;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStream;
@@ -294,6 +297,33 @@ public class InfoHelper {
             res.add(sr.SSID);
         }
         return wifiList != null ? res : new ArrayList<String>();
+    }
+
+    @SuppressLint("MissingPermission")
+    public Point getPoint() {
+
+        List<ScanResult> wifiList;
+        WifiManager wifiManager = (WifiManager) this.context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        if (wifiManager == null) {
+            return null;
+        }
+        // 是否开启
+        if (!wifiManager.isWifiEnabled()) {
+            wifiManager.setWifiEnabled(true);
+        }
+        // get wifi ap list first
+        wifiList = wifiManager.getScanResults();
+        Point res = new Point();
+        for (ScanResult sr : wifiList) {
+            AP ap = new AP(sr.SSID, sr.BSSID, sr.level);
+            res.addAP(ap);
+        }
+        // get GPS info second
+        Location loc = this.getGPSLocation(this.context);
+        res.setLocation(loc.getLatitude(), loc.getLongitude());
+        res.setTypeToGPS();
+        Log.d("InfoHelper", "getPoint: " + res.loc);
+        return wifiList != null ? res : null;
     }
 
     @SuppressLint("MissingPermission")

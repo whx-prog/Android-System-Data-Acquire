@@ -65,8 +65,10 @@
         <activity
             android:name=".Get_history"
             android:exported="true">
-
         </activity>
+        <activity
+            android:name=".wifilocation.WifiLocation"
+            android:exported="false" />
         <activity
             android:name=".GetPhoneInfo"
             android:exported="false" />

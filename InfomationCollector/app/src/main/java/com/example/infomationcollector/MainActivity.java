@@ -52,6 +52,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
+import com.example.infomationcollector.wifilocation.WifiLocation;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity{
 
     // resources
     private MyReceiver myReceiver;
-    private Button bt1, bt2,通话记录按钮,短信记录按钮,拍照按钮,应用信息按钮,社交软件按钮;
+    private Button bt1, bt2,btw,通话记录按钮,短信记录按钮,拍照按钮,应用信息按钮,社交软件按钮;
     public static final int TAKE_PHOTO = 1;//声明一个请求码，用于识别返回的结果
     private ImageView picture;
     private Uri imageUri;
@@ -119,6 +121,7 @@ public class MainActivity extends AppCompatActivity{
         picture = findViewById(R.id.图片显示);
         应用信息按钮=findViewById(R.id.获取应用);
         社交软件按钮=findViewById(R.id.社交软件);
+        btw = findViewById(R.id.btw);
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -172,6 +175,13 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Get_history.class);
                 intent.putExtra("type", "社交软件");
+                startActivity(intent);
+            }
+        });
+        btw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WifiLocation.class);
                 startActivity(intent);
             }
         });

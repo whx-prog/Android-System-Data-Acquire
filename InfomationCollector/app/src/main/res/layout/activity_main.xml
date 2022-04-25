@@ -62,4 +62,10 @@
         android:layout_height="wrap_content"
         android:text="社交软件分析" />
 
+    <Button
+        android:id="@+id/btw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WiFi指纹定位" />
+
 </LinearLayout>
