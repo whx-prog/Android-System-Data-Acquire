@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WiFi指纹定位"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  经度 :  "
+            android:textSize="30dp" />
+
+
+        <EditText
+            android:id="@+id/editx"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30dp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textViewy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  维度:  "
+            android:textSize="30dp" />
+
+
+        <EditText
+            android:id="@+id/edity"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30dp" />
+
+
+
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+
+    <Button
+        android:id="@+id/button_record"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:text="手动记录当前点" />
+
+    <Button
+        android:id="@+id/button_record_auto"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:text="自动记录当前点" />
+
+    <Button
+        android:id="@+id/button_location"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:text="通过WiFi指纹定位" />
+
+    <Button
+        android:id="@+id/button_location_gps"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:text="通过GPS定位" />
+
+    <TextView
+            android:id="@+id/tvw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
